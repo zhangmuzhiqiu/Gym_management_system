@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    #    jdbc:mysql://localhost:3306/storedb?useUnicode=true&characterEncoding=utf8&timeServerZone=Asia/Shanghai
+    url: jdbc:mysql:///gym_system
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    druid:
+      max-wait: 3000
+#  jackson:
+#    default-property-inclusion: NON_NULL
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.Gym_management_system.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #日志的标准输出，打印出sql语句的执行情况
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+page helper:
+  reasonable: true  #分页查询插件

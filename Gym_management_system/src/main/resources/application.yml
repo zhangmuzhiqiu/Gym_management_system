@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: Press-release-system #项目名称
+  profiles:
+    active: dev
+logging:
+  file:
+    path: C:\Users\asus\Desktop\待办

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.Gym_management_system.mapper.RoleMenuMapper">
+
+    <select id="selectByMenuId" resultType="com.example.Gym_management_system.entity.Menu">
+        select m.* from gym_system.x_role_menu r,gym_system.x_menu m
+        where r.menu_id = m.menu_id
+        and m.parent_id = #{pid}
+        and r.roles = #{roles}
+    </select>
+</mapper>
